@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "stock-chart-client",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,7 @@
   "license": "ISC",
   "dependencies": {
     "browserify": "^9.0.3",
+    "firebase": "^2.3.2",
     "gulp": "^3.8.11",
     "gulp-concat": "^2.5.2",
     "gulp-react": "^3.0.1",
@@ -18,9 +19,12 @@
     "gulp-watch": "^4.2.4",
     "node-notifier": "^4.2.1",
     "react": "^0.13.1",
+    "reactfire": "^0.5.1",
     "reactify": "^1.1.0",
+    "reflux": "^0.3.0",
     "vinyl-source-stream": "^1.1.0",
-    "watchify": "^2.4.0"
+    "watchify": "^2.4.0",
+    "whatwg-fetch": "^0.10.1"
   },
   "devDependencies": {}
 }
