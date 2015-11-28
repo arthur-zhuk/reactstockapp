@@ -55,10 +55,11 @@ gulp.task('build', function() {
   bundle()
 });
 
-/*
-gulp.task('serve', function(done) {
+gulp.task('serveprod', function(done) {
   gulp.src('')
     .pipe(server({
+      root: './',
+      port: process.env.PORT || 5000,
       livereload: {
         enable: true,
         filter: function(filePath, cb) {
@@ -71,15 +72,6 @@ gulp.task('serve', function(done) {
       },
       open: true
     }));
-});
-*/
-
-gulp.task('serveprod', function() {
-  connect.server({
-    root: './',
-    port: process.env.PORT || 5000,
-    livereload: false
-  })
 });
 
 gulp.task('sass', function () {
