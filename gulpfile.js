@@ -61,6 +61,7 @@ gulp.task('serve', function(done) {
       livereload: {
         enable: true,
         host: '0.0.0.0',
+        port: process.env.PORT,
         filter: function(filePath, cb) {
           if(/main.js/.test(filePath)) {
             cb(true)
@@ -69,7 +70,7 @@ gulp.task('serve', function(done) {
           }
         }
       },
-      open: true
+      open: false
     }));
 });
 
