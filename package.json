@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "prestart": "node app",
-    "postinstall": "gulp default",
+    "postinstall": "gulp default"
   },
   "author": "",
   "license": "ISC",
