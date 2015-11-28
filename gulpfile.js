@@ -58,7 +58,6 @@ gulp.task('build', function() {
 gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
-      port: process.env.PORT || 8000,
       livereload: {
         enable: true,
         filter: function(filePath, cb) {
