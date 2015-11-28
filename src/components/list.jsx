@@ -20,7 +20,8 @@ module.exports = React.createClass({
         item.key = key;
 
         children.push(
-          <ListItem item={item}
+          <ListItem
+            item={item}
             key = {key}
             >
           </ListItem>

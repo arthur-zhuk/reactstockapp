@@ -16,14 +16,12 @@ module.exports = React.createClass({
     //$(function () {
       var seriesOptions = [],
           seriesCounter = 0,
-          names = [];
           stockNames = []
 
           for (var key in this.props.items) {
             stockNames.push(this.props.items[key].text)
           }
           stockNames.pop()
-          console.log(stockNames, names)
 
         function createChart() {
 

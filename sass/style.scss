@@ -1,7 +1,13 @@
-.black {
-  color: black
+.content {
+  opacity: 0;
+  transition: opacity 1s ease-in;
 }
-
-.red {
-  color: red
+.loaded {
+  opacity: 1;
+}
+.input-group {
+  margin-bottom: 15px;
+}
+.clear-complete {
+  margin-bottom: 15px;
 }
