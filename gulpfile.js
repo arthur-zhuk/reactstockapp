@@ -55,6 +55,7 @@ gulp.task('build', function() {
   bundle()
 });
 
+/*
 gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
@@ -71,6 +72,7 @@ gulp.task('serve', function(done) {
       open: true
     }));
 });
+*/
 
 gulp.task('serveprod', function() {
   connect.server({
@@ -87,7 +89,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'serve', 'serveprod', 'sass', 'watch']);
+gulp.task('default', ['build', /*'serve'*/, 'serveprod', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
