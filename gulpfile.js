@@ -59,9 +59,8 @@ gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
       livereload: {
-        host: 'secret-beyond-3910.herokuapp.com',
         enable: true,
-        port: 5001,
+        host: '0.0.0.0',
         filter: function(filePath, cb) {
           if(/main.js/.test(filePath)) {
             cb(true)
