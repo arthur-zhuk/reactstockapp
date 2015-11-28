@@ -70,7 +70,7 @@ gulp.task('serve', function(done) {
           }
         }
       },
-      https: false,
+      https: true,
       open: true
     }));
 });
