@@ -61,7 +61,7 @@ gulp.task('serve', function(done) {
     .pipe(webserver({
       livereload: {
         host: '0.0.0.0',
-        port: process.env.PORT || 5000,
+        port: process.env.PORT || 8000,
         filter: function(filePath, cb) {
           if(/main.js/.test(filePath)) {
             cb(true)
