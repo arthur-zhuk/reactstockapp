@@ -6,6 +6,7 @@ var watchify = require('watchify');
 var reactify = require('reactify');
 var notifier = require('node-notifier');
 var server = require('gulp-server-livereload');
+var webserver = require('gulp-webserver');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
@@ -57,7 +58,7 @@ gulp.task('build', function() {
 
 gulp.task('serve', function(done) {
   gulp.src('')
-    .pipe(server({
+    .pipe(webserver({
       livereload: {
         host: '0.0.0.0',
         port: process.env.PORT || 5000,
