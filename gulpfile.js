@@ -59,7 +59,9 @@ gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
       livereload: {
+        host: 'secret-beyond-3910.herokuapp.com',
         enable: true,
+        port: 5001,
         filter: function(filePath, cb) {
           if(/main.js/.test(filePath)) {
             cb(true)
@@ -72,14 +74,6 @@ gulp.task('serve', function(done) {
     }));
 });
 
-gulp.task('serveprod', function() {
-  connect.server({
-    root: './',
-    port: process.env.PORT || 5200, // localhost:5000
-    livereload: false
-  });
-});
-
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
@@ -87,7 +81,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'serve', 'serveprod', 'sass', 'watch']);
+gulp.task('default', ['build', 'serve', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
