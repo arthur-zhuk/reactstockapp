@@ -3,6 +3,7 @@ var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
+var connect = require('gulp-connect');
 var reactify = require('reactify');
 var notifier = require('node-notifier');
 var server = require('gulp-server-livereload');
