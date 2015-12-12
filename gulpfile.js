@@ -58,7 +58,7 @@ gulp.task('build', function() {
 gulp.task('serveprod', function() {
   connect.server({
     root: './',
-    port: process.env.PORT || 5000,
+    port: process.env.PORT || 8080,
     livereload: false
   });
 });
@@ -87,7 +87,7 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('default', ['build', 'serve', 'sass', 'watch']);
+gulp.task('default', ['build', 'serveprod', 'sass', 'watch']);
 
 gulp.task('watch', function () {
   gulp.watch('./sass/**/*.scss', ['sass']);
