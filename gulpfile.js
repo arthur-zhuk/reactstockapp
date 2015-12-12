@@ -57,19 +57,9 @@ gulp.task('build', function() {
 
 gulp.task('serveprod', function() {
   $.connect.server({
-    root: './',
+    root: '',
     port: process.env.PORT || 8080,
-    livereload: {
-      enable: true,
-    filter: function(filePath, cb) {
-      if(/main.js/.test(filePath)) {
-        cb(true)
-      } else if(/style.css/.test(filePath)){
-        cb(true)
-      }
-    }
-  },
-  open: true
+    livereload: false
   });
 });
 
