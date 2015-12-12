@@ -63,7 +63,7 @@ gulp.task('serveprod', function() {
     livereload: false
   });
 });
-
+/*
 gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
@@ -80,7 +80,7 @@ gulp.task('serve', function(done) {
       open: true
     }));
 });
-
+*/
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
