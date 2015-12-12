@@ -59,10 +59,20 @@ gulp.task('serveprod', function() {
   $.connect.server({
     root: './',
     port: process.env.PORT || 8080,
-    livereload: false
+    livereload: {
+      enable: true,
+    filter: function(filePath, cb) {
+      if(/main.js/.test(filePath)) {
+        cb(true)
+      } else if(/style.css/.test(filePath)){
+        cb(true)
+      }
+    }
+  },
+  open: true
   });
 });
-/*
+
 gulp.task('serve', function(done) {
   gulp.src('')
     .pipe(server({
@@ -79,7 +89,7 @@ gulp.task('serve', function(done) {
       open: true
     }));
 });
-*/
+
 gulp.task('sass', function () {
   gulp.src('./sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
