@@ -6,7 +6,6 @@ var watchify = require('watchify');
 var reactify = require('reactify');
 var notifier = require('node-notifier');
 var server = require('gulp-server-livereload');
-var webserver = require('gulp-webserver');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
@@ -58,10 +57,9 @@ gulp.task('build', function() {
 
 gulp.task('serve', function(done) {
   gulp.src('')
-    .pipe(webserver({
+    .pipe(server({
       livereload: {
-        host: '0.0.0.0',
-        port: process.env.PORT || 8000,
+        enable: true,
         filter: function(filePath, cb) {
           if(/main.js/.test(filePath)) {
             cb(true)
@@ -70,7 +68,6 @@ gulp.task('serve', function(done) {
           }
         }
       },
-      https: true,
       open: true
     }));
 });
